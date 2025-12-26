@@ -1,0 +1,21 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const globeToggle = document.getElementById("globe-toggle");
+    const languageDropdown = document.getElementById("language-dropdown");
+
+    if (!menuToggle || !navLinks || !globeToggle || !languageDropdown) {
+        console.error("Some elements are missing. Check your HTML.");
+        return;
+    }
+
+    // Menu Toggle
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+    });
+
+    // Globe Icon Toggle
+    globeToggle.addEventListener("click", function() {
+        languageDropdown.classList.toggle("active");
+    });
+});
